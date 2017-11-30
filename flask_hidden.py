@@ -45,6 +45,7 @@ def time():
     """Time form.  Can I get the local time zone 
     of the user?  
     """
+    flask.g.proposed_time = "4-5am on Saturday, because it sounds terrible"
     return flask.render_template('timezone.html')
 
 
