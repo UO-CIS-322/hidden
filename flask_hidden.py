@@ -32,6 +32,9 @@ def index():
     to screen in hidden fields.  Initially we 
     know nothing. 
     """
+    flask.g.link_local = flask.url_for("time")
+    flask.g.link_external = flask.url_for("time", _external=True)
+    app.logger.debug("Links '{}' and '{}'".format(flask.g.link_local, flask.g.link_external))
     return flask.render_template('index.html')
 
 ###
