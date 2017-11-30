@@ -34,6 +34,20 @@ def index():
     """
     return flask.render_template('index.html')
 
+###
+# Hijacking this project for an experiment with timezones
+###
+@app.route("/time")
+def time():
+    """Time form.  Can I get the local time zone 
+    of the user?  
+    """
+    return flask.render_template('timezone.html')
+
+
+
+
+
 #######################
 # Form handlers.
 # At each step, we stash and retrieve information
